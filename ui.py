@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import *
+from tkvideo import tkvideo
 
 window = tk.Tk()
 window.title("Video Feed")
@@ -9,8 +10,12 @@ heading = tk.Label(window, text = "Live Video Feed")
 heading.grid(row = 0, column = 0, columnspan = 2, pady = 10)
 
 # Sidebar Decoration
-"""dec = tk.Label(window, bg = "pink", width = 10, height = 45)
-dec.grid(row = 0, rowspan = 4, column = 3, columnspan = 2)"""
+dec = tk.Label(window, bg = "pink", width = 10, height = 45)
+dec.grid(row = 0, rowspan = 4, column = 3, columnspan = 2)
+
+# Insert video into grid
+"""player = tkvideo("/Users/aditikisara/Documents/GitHub/sampleVid.mov", window, loop = True)
+player.grid(row = 1, column = 0, sticky = "NSEW", padx = 2, pady = 2)"""
 
 # Slots for the video feeds (currently labels, but will switch to different widget to be more interactive)
 video1 = tk.Label(window, text = "Feed #1", borderwidth = 3, relief = "ridge", height = 10, width = 20)
