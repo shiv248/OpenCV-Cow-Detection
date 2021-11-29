@@ -1,12 +1,19 @@
+"""
+This code will open up a saved video on a tkinter window. The user can click on the video and a box will appear around that point,
+symbolizing a new cow detected.
+"""
+
 import tkinter as tk
-from tkinter import *
 from tkvideo import tkvideo
 
+# Create a window
 window = tk.Tk()
 window.title("Video Feed")
 
 # Create heading
 heading = tk.Label(window, text = "Live Video Feed")
+#heading.pack()
+
 heading.grid(row = 0, column = 0, columnspan = 2, pady = 10)
 
 # Sidebar Decoration
@@ -42,5 +49,17 @@ video6.grid(row = 3, column = 1, sticky = "NSEW", padx = 2, pady = 2)
     rowspan = 3,
     sticky = "NS")
 sb.config( command = heading.yview )"""
+
+# Create a label. This will act as a placeholder for where we play the video.
+placeholder = tk.Label(window)
+placeholder.pack()
+
+# Play the video (this is the path of the video from my laptop. If you want to test it on your laptop:
+    # right-click "sampleVid.mov"
+    # select "Copy Path"
+    # replace the path I have with the one you just copied)
+# For demonstration purposes, we can just use the path of whoever is presenting.
+video = tkvideo("/Users/aditikisara/Documents/GitHub/OpenCV-Cow-Detection/sampleVid.mov", placeholder, loop = 1, size = (1280,720))
+video.play()
 
 window.mainloop()
