@@ -1,7 +1,7 @@
-##################################################
+""" ##################################################
 #Draw rectangle on camera feed (rectangle disappears when user clicks something else)
 
-"""import numpy as np
+import numpy as np
 import cv2 
 
 drawing = False
@@ -30,20 +30,20 @@ while True:
         break
 
 cap.release()#Draw rectangle on camera feed (rectangle disappears when user clicks something else)
-cv2.destroyAllWindows()"""
+cv2.destroyAllWindows() """
 
 ##############################################################
 #Draw multiple rectangles on an image
-
-"""import tkinter as tk # this is in python 3.4. For python 2.x import Tkinter
+import tkinter as tk # this is in python 3.4. For python 2.x import Tkinter
 from PIL import Image, ImageTk
-
-
 
 class ExampleApp(tk.Tk):
     def __init__(self):
         tk.Tk.__init__(self)
+        
         self.x = self.y = 0
+        self.heading = tk.Label(self)
+        self.heading.pack()
         self.canvas = tk.Canvas(self, width=512, height=512, cursor="cross")
         self.canvas.pack(side="top", fill="both", expand=True)
         self.canvas.bind("<ButtonPress-1>", self.on_button_press)
@@ -60,9 +60,9 @@ class ExampleApp(tk.Tk):
 
 
     def _draw_image(self):
-         self.im = Image.open('/Users/aditikisara/Documents/GitHub/OpenCV-Cow-Detection/dice.jpeg')
-         self.tk_im = ImageTk.PhotoImage(self.im)
-         self.canvas.create_image(0,0,anchor="nw",image=self.tk_im)
+        self.im = Image.open('/Users/aditikisara/Documents/GitHub/OpenCV-Cow-Detection/dice.jpeg')
+        self.tk_im = ImageTk.PhotoImage(self.im)
+        self.canvas.create_image(0,0,anchor="nw",image=self.tk_im)
 
 
 
@@ -89,4 +89,4 @@ class ExampleApp(tk.Tk):
 
 if __name__ == "__main__":
     app = ExampleApp()
-    app.mainloop()"""
+    app.mainloop()
