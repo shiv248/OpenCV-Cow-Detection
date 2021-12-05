@@ -31,6 +31,9 @@ def onclick(btnNum, btn):
 window = tk.Tk()
 window.title("Video Feed")
 
+space = tk.Label(window)
+space.pack()
+
 # Create heading
 heading = tk.Label(window, text = "Live Video Feed\n", font = "sans 16")
 heading.pack()
@@ -101,7 +104,7 @@ btn7.pack(side = tk.LEFT, padx = "45px")
 btn8 = tk.Button(frame2, text = "                     8                     ", fg = "black", highlightthickness = "1px", highlightbackground = "white", command = lambda: onclick("8", btn8))
 btn8.pack(side = tk.LEFT, padx = "45px")
 
-space5 = tk.Label(frame2, text = "")
+space5 = tk.Label(frame2, text = " ")
 space5.pack()
 
 window.mainloop()
