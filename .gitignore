@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#
+/Users/aditikisara/Documents/GitHub/OpenCV-Cow-Detection/images
+/Users/aditikisara/Documents/GitHub/OpenCV-Cow-Detection/feeds

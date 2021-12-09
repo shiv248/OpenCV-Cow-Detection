@@ -74,7 +74,7 @@ placeholder.pack()
     # select "Copy Path"
     # replace the path I have with the one you just copied)
 # For demonstration purposes, we can just use the path of whoever is presenting.
-video = tkvideo("/Users/aditikisara/Documents/GitHub/OpenCV-Cow-Detection/feeds/feed1.mp4", placeholder, loop = 1, size = (889,500))
+video = tkvideo("/Users/aditikisara/Documents/GitHub/OpenCV-Cow-Detection/feeds/feed - 2.mp4", placeholder, loop = 1, size = (889,500))
 video.play()
 
 space3 = tk.Label(window)
