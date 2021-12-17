@@ -14,7 +14,7 @@ colors = np.random.uniform(0, 255, size=(len(classes), 3))
 
 
 # Loading image
-img = cv2.imread("image6.jpg")
+img = cv2.imread("Screenshot 2021-12-17 091446.jpg")
 img = cv2.resize(img, None, fx=0.4, fy=0.4)
 height, width, channels = img.shape #this gets the height width and how many primary colors fill the colorspace ie 2 for B/W 3 for BGR
 
